@@ -12,8 +12,10 @@ try {
   echo "Connected successfully";
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
+  //Le script s'arrete (die) et un message d'erreur apparait.
+  die();
 }
-
 // // Close the Connection
+// //il vaut mieux la laisser ouverte, puisque PHP s'occupe de le fermer la connexion à la fin du script, tout seul.
 // $conn = null;
 ?>
